@@ -57,9 +57,9 @@ main {
 
 aside {
     grid-area: aside;
-    background-color: white;
+    background-color: #e67e22;
     padding: 20px;
-    border-left: 5px solid #e67e22;
+    border-left: 5px solid #34495e;
 }
 
 footer {
