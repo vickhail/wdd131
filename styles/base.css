@@ -4,7 +4,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #bdc3c7;
+    background-color: #ecf0f1;
     color: #2c3e50;
 }
 
@@ -32,16 +32,34 @@ nav a:hover {
 }
 
 main {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 20px;
 }
 
-.card {
-    margin-bottom: 20px;
+section.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 2;
+}
+
+section.card img {
+    max-width: 200px;
+    height: auto;
+    float: right;
+    margin-left: 20px;
+    border-radius: 8px;
+}
+
+aside {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
 }
 
 footer {
