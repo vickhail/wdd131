@@ -24,78 +24,27 @@ window.addEventListener('resize', function() {
     }
 });
 
-const feedbackTextarea = document.getElementById('feedback');
-const placeholderText = "Send a book you want reviewed or feedback to improve Literary Haven";
-
-feedbackTextarea.addEventListener('focus', function() {
-    if (this.value === placeholderText) {
-        this.value = '';
-        this.style.color = '#000';
-    }
-});
-
-feedbackTextarea.addEventListener('blur', function() {
-    if (this.value === '') {
-        this.value = placeholderText;
-        this.style.color = '#ccc';
-    }
-});
-
-if (feedbackTextarea.value === '') {
-    feedbackTextarea.value = placeholderText;
-    feedbackTextarea.style.color = '#ccc';
-}
-
-if ('loading' in HTMLImageElement.prototype) {
-    console.log('Browser supports lazy-loading');
-} else {
-    console.log('Browser does not support lazy-loading, using IntersectionObserver');
-    document.addEventListener('DOMContentLoaded', function() {
-        const lazyImages = [].slice.call(document.querySelectorAll('img[loading="lazy"]'));
-        if ('IntersectionObserver' in window) {
-            let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        let lazyImage = entry.target;
-                        lazyImage.src = lazyImage.dataset.src;
-                        lazyImageObserver.unobserve(lazyImage);
-                    }
-                });
-            });
-
-            lazyImages.forEach(function(lazyImage) {
-                lazyImageObserver.observe(lazyImage);
-            });
-        } else {
-            let lazyLoad = function() {
-                lazyImages.forEach(function(lazyImage) {
-                    if (lazyImage.getBoundingClientRect().top < window.innerHeight && lazyImage.getBoundingClientRect().bottom > 0 && getComputedStyle(lazyImage).display !== 'none') {
-                        lazyImage.src = lazyImage.dataset.src;
-                    }
-                });
-            };
-
-            lazyLoad();
-            window.addEventListener('scroll', lazyLoad);
-            window.addEventListener('resize', lazyLoad);
-            window.addEventListener('orientationchange', lazyLoad);
-        }
-    });
-}
-
-document.querySelectorAll('.user-rating span').forEach((star, index) => {
-    star.addEventListener('click', function() {
-        const rating = index + 1;
-        const reviewId = this.closest('article').dataset.id;
-        localStorage.setItem(`rating-${reviewId}`, rating);
-        updateRatingDisplay(reviewId, rating);
+document.querySelectorAll('.user-rating').forEach(ratingContainer => {
+    const reviewId = ratingContainer.closest('article').dataset.id;
+    ratingContainer.querySelectorAll('span').forEach((star, index) => {
+        star.addEventListener('click', function() {
+            const rating = index + 1;
+            localStorage.setItem(`rating-${reviewId}`, rating);
+            updateRatingDisplay(reviewId, rating);
+        });
     });
 });
 
 function updateRatingDisplay(reviewId, rating) {
     const stars = document.querySelectorAll(`[data-id="${reviewId}"] .user-rating span`);
     stars.forEach((star, index) => {
-        star.textContent = index < rating ? '★' : '☆';
+        if (index < rating) {
+            star.textContent = '★';
+            star.classList.add('selected');
+        } else {
+            star.textContent = '☆';
+            star.classList.remove('selected');
+        }
     });
 }
 

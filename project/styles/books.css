@@ -117,10 +117,15 @@ main {
     margin-right: 5px;
 }
 
-.review .user-rating span {
+.user-rating span {
     cursor: pointer;
     font-size: 1.5em;
     margin-left: 3px;
+    color: #ccc;
+}
+
+.user-rating span.selected {
+    color: #000;
 }
 
 footer {
