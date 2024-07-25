@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    /* Background Color */
+    color: #333333;
+    /* Text Color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    background-color: #00796b;
+    /* Header/Footer Background */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+form {
+    background: #ffffff;
+    /* Form Background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #00796b;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #FFF;
+    box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 3px;
+}
+
+.rating-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.rating-options label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.features-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.features-options label {
+    margin-bottom: 5px;
+}
+
+footer {
+    width: 100%;
+    padding: 20px;
+    background: #00796b;
+    /* Header/Footer Background */
+    color: white;
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: #00796b;
+    /* Header/Footer Background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    font-size: 1.2em;
+}
+
+input[type="submit"]:hover {
+    background-color: #004d40;
+}
+
+textarea {
+    resize: vertical;
+}
+
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+}

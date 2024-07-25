@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/form.css">
+    <title>Review Confirmation</title>
+</head>
+
+<body>
+    <h1>Thank You for Your Review!</h1>
+    <p>Your review has been submitted successfully.</p>
+    <p id="reviewCount"></p>
+    <footer>
+        <p>&copy; 2024 Product Reviews Inc.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const reviewCount = localStorage.getItem('reviewCount') || 0;
+            document.getElementById('reviewCount').textContent = `You have submitted ${reviewCount} reviews.`;
+        });
+    </script>
+</body>
+
+</html>

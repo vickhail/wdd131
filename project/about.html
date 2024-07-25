@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <title>About Page - Book Review Blog</title>
+    <link rel="stylesheet" href="styles/about.css">
+</head>
+
+<body>
+    <header>
+        <h1>Literary Haven</h1>
+        <div id="hamburger" class="hamburger">&#9776;</div>
+    </header>
+    <nav id="navbar">
+        <div id="nav-links" class="nav-links">
+            <div id="close" class="close">&times;</div>
+            <a href="home.html">Home</a>
+            <a href="books.html">Books</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+    <main>
+        <section class="about">
+            <div class="image-container">
+                <img src="images/about-image.webp" alt="Mariajosé Escobar" loading="lazy">
+            </div>
+            <div class="content-container">
+                <div class="about-blogger">
+                    <h2>About the Blogger</h2>
+                    <p>Hello there! My name is Mariajosé Escobar, a 22-year-old book lover and aspiring software developer. Ever since I was a child, I've been enchanted by the magic of books. From fairy tales that whisked me away to far-off lands, to novels that offered deep insights into the human condition, reading has always been my escape and my education. For my Dynamic Web Fundamentals course I was tasked with creating a site so I decided to create this book blog.<br>
+                        <br>Warm regards,<br>MJ E.</p>
+                </div>
+                <div class="rankings special-color">
+                    <h2>How Rankings Are Done</h2>
+                    <p>When ranking books I use the follow a little system<br>
+                        <br>
+                        One-star reviews: These are for books I couldn't get through. They failed to capture my interest or had elements that made it difficult for me to continue reading.<br>
+                        Two-stars: These books I made it through but wasn't a fan. They were readable, but I probably won't seek out other works by the same author.<br>
+                        Three-stars: These were good and enjoyable, but not great or memorable. They are solid reads that I would recommend to others looking for something pleasant and engaging, but they didn't leave a lasting impact on me.<br>
+                        Four-stars: These books were great reads that I thoroughly enjoyed. They kept me engaged from start to finish and are ones I would eagerly recommend to fellow readers.<br>
+                        Five-stars: These books made me feel or react with emotion, and I remember everything about them. They are memorable, with elements that stay with me long after I've finished reading, and I would definitely recommend them to others.<br>
+                        <br>
+                        In this blog, you can also rate the books that you have read, you may use this system or any other you have.
+                    </p>
+                </div>
+                <div class="contact special-color">
+                    <h2>Contact Info for Future Book Reviews</h2>
+                    <form class="contact-form">
+                        <textarea id="feedback" name="feedback" rows="5" placeholder="Send a book you want reviewed or feedback to improve Literary Haven"></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>2024 📚 Mariajosé Escobar 📚 Chile</p>
+        <p>Last modification date: <span id="mod-date"></span></p>
+    </footer>
+    <script src="scripts/home.js"></script>
+</body>
+
+</html>

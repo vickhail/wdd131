@@ -1,0 +1,242 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #61a6ab;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    position: relative;
+}
+
+nav {
+    background-color: #e3b354;
+    color: white;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.3s;
+}
+
+#hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 2em;
+}
+
+#close {
+    display: none;
+    cursor: pointer;
+    font-size: 2em;
+    padding: 10px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+main {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.introduction {
+    background: rgba(97, 166, 171, 0.2);
+    padding: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+.popular-reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.popular-review {
+    background: rgba(227, 179, 84, 0.2);
+    padding: 10px;
+    width: 30%;
+    box-sizing: border-box;
+    font-family: 'Montserrat', serif;
+    font-size: 1em;
+    text-align: left;
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review {
+    background: rgba(227, 179, 84, 0.2);
+    margin: 10px;
+    padding: 5px;
+    width: 90%;
+    max-width: 600px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', serif;
+    font-size: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    min-height: 250px;
+    height: 250px;
+}
+
+.special-color {
+    background: rgba(97, 166, 171, 0.2);
+}
+
+.review img {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.review p {
+    text-align: left;
+    flex: 1;
+}
+
+footer {
+    background-color: #e3b354;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+        text-align: left;
+    }
+
+    #hamburger {
+        display: block;
+        font-size: 2.5em;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -200px;
+        height: 100%;
+        width: 200px;
+        z-index: 1;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        transition: right 0.3s;
+        background-color: #61a6ab;
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    #close {
+        display: block;
+        font-size: 2em;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .popular-reviews {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .popular-review {
+        width: 90%;
+    }
+
+    .review {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        text-align: center;
+    }
+
+    .review img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .review p {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) {
+    #hamburger {
+        display: none;
+    }
+
+    nav {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-links {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #close {
+        display: none;
+    }
+
+    .reviews {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .review {
+        width: 45%;
+        margin: 20px;
+        height: 250px;
+    }
+
+    .review p {
+        text-align: left;
+    }
+}

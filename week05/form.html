@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/form.css">
+    <title>Product Review Form</title>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form id="reviewForm" method="get" action="review.html">
+            <label for="productName">Product Name</label>
+            <select id="productName" name="productName" required>
+                <option value="" disabled selected>Choose a Product ...</option>
+            </select>
+
+            <label>Overall Rating</label>
+            <div class="rating-options">
+                <label>
+                    <span class="star">☆</span>
+                    <input type="radio" name="rating" value="1" required>
+                </label>
+                <label>
+                    <span class="star">☆☆</span>
+                    <input type="radio" name="rating" value="2" required>
+                </label>
+                <label>
+                    <span class="star">☆☆☆</span>
+                    <input type="radio" name="rating" value="3" required>
+                </label>
+                <label>
+                    <span class="star">☆☆☆☆</span>
+                    <input type="radio" name="rating" value="4" required>
+                </label>
+                <label>
+                    <span class="star">☆☆☆☆☆</span>
+                    <input type="radio" name="rating" value="5" required>
+                </label>
+            </div>
+
+            <label for="installationDate">Date of Installation</label>
+            <input type="date" id="installationDate" name="installationDate" required>
+
+            <label>Which features did you find useful in the product? (Check all that apply)</label>
+            <div class="features-options">
+                <label><input type="checkbox" name="features" value="durability"> Durability</label>
+                <label><input type="checkbox" name="features" value="ease_of_use"> Ease of Use</label>
+                <label><input type="checkbox" name="features" value="performance"> Performance</label>
+                <label><input type="checkbox" name="features" value="design"> Design</label>
+            </div>
+
+            <label for="reviewText">Written Review <span>(Optional)</span></label>
+            <textarea id="reviewText" name="reviewText"></textarea>
+
+            <label for="userName">Your Name <span>(Optional)</span></label>
+            <input type="text" id="userName" name="userName">
+
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 📚 Mariajosé Escobar 📚 Chile</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/form.js"></script>
+</body>
+
+</html>
